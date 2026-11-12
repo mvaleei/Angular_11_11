@@ -15,19 +15,19 @@
     <td><label for="">Tipologia figura</label></td>
     <td>
       <select [(ngModel)]="figura">
-        <option value=1>Rettangolo</option>
-        <option value=2>Triangolo</option>
+        <option value="Rettangolo:1">Rettangolo</option>
+        <option value="Triangolo:2:[11,222,33]">Triangolo</option>
       </select> <span>{{figura}}</span>
     </td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td colspan=" 2">
       <button (click)="calcoloArea()">Calcolo Area</button>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <label for="">Il calcolo dell'area è: {{area}}</label>
+      <label for="">Il calcolo dell'area della figura: {{figura.split(":")[0]}} è: {{area}}</label>
     </td>
   </tr>
 </table>

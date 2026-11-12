@@ -15,14 +15,21 @@ export class App {
 
   altezzaFigura: number = 0
 
-  figura: number = 0
+  figura: string = ""
 
   area: number = 0
 
 
   calcoloArea(): void {
 
-    this.area = this.altezzaFigura * this.baseFigura / this.figura
+    var divisione: Array<string> = this.figura.split(":")
+
+    this.area = this.altezzaFigura * this.baseFigura / parseInt(divisione[1])
+
+
+    //Il calcolo dell'area della figura di tipo: xxxx è: (calcolo)
+
+    //transpilazione
 
   }
 
