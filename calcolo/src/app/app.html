@@ -1,0 +1,33 @@
+<table border="2">
+  <tr>
+    <td><label for="">Altezza figura</label></td>
+    <td>
+      <input type="number" [(ngModel)]="altezzaFigura"> <span>{{altezzaFigura}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="">Base figura</label></td>
+    <td>
+      <input type="number" [(ngModel)]="baseFigura"> <span>{{baseFigura}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="">Tipologia figura</label></td>
+    <td>
+      <select [(ngModel)]="figura">
+        <option value=1>Rettangolo</option>
+        <option value=2>Triangolo</option>
+      </select> <span>{{figura}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button (click)="calcoloArea()">Calcolo Area</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <label for="">Il calcolo dell'area è: {{area}}</label>
+    </td>
+  </tr>
+</table>
