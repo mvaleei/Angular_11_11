@@ -25,9 +25,63 @@
       <button (click)="calcoloArea()">Calcolo Area</button>
     </td>
   </tr>
+  @if (area>0) {
   <tr>
     <td colspan="2">
       <label for="">Il calcolo dell'area della figura: {{figura.split(":")[0]}} è: {{area}}</label>
     </td>
   </tr>
+  }
+  @else
+  {
+  <tr>
+    <td colspan="2" align="center">
+      <label for="">Inserire dei dati</label>
+    </td>
+  </tr>
+  }
+
 </table>
+
+<div style="background-color: aquamarine;" align="center">
+  <h2>Gestione delle anagrafiche</h2>
+  <h3>Numero di persone presenti in anagrafica: {{anagrafica.length}}</h3>
+
+  <div style="background-color:aqua ;" align="center">
+    <h3>Area di inserimento di un nuovo dato in anagrafica</h3>
+    <table border="1">
+      <tr>
+        <td><label for="">Cognome</label></td>
+        <td>
+          <input type="text" [(ngModel)]="cognomeInserito">
+        </td>
+      </tr>
+      <tr>
+        <td><label for="">Nome</label></td>
+        <td>
+          <input type="text" [(ngModel)]="nomeInserito">
+        </td>
+      </tr>
+      <tr>
+        <td><label for="">Anni</label></td>
+        <td>
+          <input type="number" [(ngModel)]="anniInseriti">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button (click)="addPersona()">Inserire dati in anagrafica</button>
+        </td>
+      </tr>
+    </table>
+    <br>
+  </div>
+
+
+  @for (people of anagrafica; track $index) {
+  <div>Nome: {{people.nome}} - Cognome: {{people.cognome}} - Anni: {{people.anni}} - ID: c{{people.id}}</div>
+  }
+  @empty {
+  <div style="background-color: red;">Array attualmente vuoto</div>
+  }
+</div>
