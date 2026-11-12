@@ -1,0 +1,21 @@
+<div style="background-color: orange;height: 600px;" align="center">
+  <h1>Sono il componente MASTER</h1>
+
+
+  <br>
+
+  <app-figlio></app-figlio>
+  <br>
+  <app-figlio></app-figlio>
+
+
+  <div style="background-color: aqua; width: 40%; float: right; height: 350px;">
+
+    @for (numero of generale; track $index) {
+    <app-figlio></app-figlio> 
+    }
+
+
+  </div>
+  <br>
+</div>

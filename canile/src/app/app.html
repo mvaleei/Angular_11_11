@@ -38,10 +38,10 @@
 
 <table border="4">
 
-  @for (dog of canileArchivio; track $index) {
+  @for (dog of canileArchivio; track dog.idDog) {
   <tr>
     <td><label for="">{{dog.idDog}}</label></td>
-    <td><label for="">{{dog.nome}}</label></td>
+    <td><label for="">{{dog.nome}} {{dog.idDog}}</label></td>
     <td><label for="">{{dog.anni}}</label></td>
     <td><label for="">{{dog.box}}</label></td>
     <td><label for="">{{dog.razza.descrizione}}</label></td>
