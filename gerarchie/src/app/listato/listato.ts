@@ -13,7 +13,8 @@ import { calcolaIva } from '../../Shared/ivato';
   imports: [
     UpperCasePipe,
     CurrencyPipe,
-    CambiaLettera
+    CambiaLettera,
+    calcolaIva
   ],
   templateUrl: './listato.html',
   styleUrl: './listato.css',
