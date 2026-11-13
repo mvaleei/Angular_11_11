@@ -6,6 +6,7 @@
     @for (item of contab; track item.numero) {
     <div>Numero: {{item.numero}} - Cliente: {{item.cliente}} - Descrizione: {{item.descrizione}} Importo:
         {{item.importo}} - Cliente MAIUSCOLO: {{item.cliente | uppercase}} - {{item.importo | currency:"€"}}
+        - {{item.cliente | changeLettera:"M" | uppercase}}
     </div>
     }
 
