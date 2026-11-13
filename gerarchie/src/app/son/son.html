@@ -1,3 +1,19 @@
 <div style="background-color: red; width: 80%; margin-left: 5%;">
     <h3>Sono il componente figlio che invia dati al padre</h3>
+
+    <label for="">Digita il tuo lavoro attuale</label>
+    <input type="text" [(ngModel)]="lavoroInserito">
+    <span>{{lavoroInserito}}</span>
+
+    <button (click)="inviaAlPadre()">Invia </button>
+
+    <br><br>
+    <label for="">Digita i tuoi anni</label>
+    <input type="number" [(ngModel)]="anniInseriti"><span>{{anniInseriti}}</span>
+    <button (click)="inviaAnniAlpadre()">Clicca per inviare gli anni al padre</button>
+    <br>
+
+    <button (click)="inviaAll()">Invia tutti i dati al padre</button>
+
+    <br>
 </div>

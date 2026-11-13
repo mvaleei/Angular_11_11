@@ -9,6 +9,7 @@ import { Listato } from './listato/listato';
 
 import { Father } from './father/father';
 
+
 @Component({
   selector: 'app-root',
   imports: [
@@ -17,7 +18,7 @@ import { Father } from './father/father';
     FormsModule,
     Listato,
     Father
-  ],
+],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

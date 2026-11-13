@@ -10,4 +10,18 @@ import { Son } from '../son/son';
 })
 export class Father {
 
+
+  lavoro: string = "Info base del father"
+
+  riceviLavoroDalFiglio(lavoroScrittoNelFiglio: string): void {
+    this.lavoro = lavoroScrittoNelFiglio;
+  }
+
+
+  anniRicevuti: number = 0
+  riceviAnniDalFiglio(anniRicevutiDalFiglio: number): void {
+    this.anniRicevuti = anniRicevutiDalFiglio;
+  }
+
+
 }
