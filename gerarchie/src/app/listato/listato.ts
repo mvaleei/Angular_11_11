@@ -8,13 +8,16 @@ import { CambiaLettera } from '../../Shared/cambiaLettera';
 
 import { calcolaIva } from '../../Shared/ivato';
 
+import { Dettaglio } from '../dettaglio/dettaglio';
+
 @Component({
   selector: 'app-listato',
   imports: [
     UpperCasePipe,
     CurrencyPipe,
     CambiaLettera,
-    calcolaIva
+    calcolaIva,
+    Dettaglio
   ],
   templateUrl: './listato.html',
   styleUrl: './listato.css',

@@ -11,5 +11,13 @@
     </div>
     }
 
+    <br>
+
+    @for (fattura of contab; track fattura.numero) {
+    <app-dettaglio [fatturaRicevuta]="fattura"></app-dettaglio>
+    }
+
+
+    <br>
 
 </div>

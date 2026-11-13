@@ -1,0 +1,12 @@
+<div style="background-color: greenyellow; width: 80%; margin-left: 5%;">
+    Numero: {{fatturaRicevuta.numero}}
+    <button (click)="viewValue()">{{visualizza ? "Nascondi" :"Visualizza"}}</button>
+    @if( visualizza ){
+    <span>
+        - Cliente: {{fatturaRicevuta.cliente}}
+        - Descrizione: {{fatturaRicevuta.descrizione}}
+        - Importo: {{fatturaRicevuta.importo}}
+    </span>
+    }
+
+</div>
