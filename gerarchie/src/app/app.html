@@ -2,13 +2,31 @@
   <h1>Sono il componente MASTER</h1>
 
 
+  <app-listato></app-listato>
+
+  <br><br>
+
+
+  <label for="">Digita la tua città di nascita</label>
+  <input type="text" [(ngModel)]="cittaDalPadre">
+  <span>{{cittaDalPadre}}</span>
+
   <br>
 
-  <app-figlio></app-figlio>
+  <label for="">Digita i tuoi anni</label>
+  <input type="number" [(ngModel)]="anniDigitati"> <span>{{anniDigitati}}</span>
+
+
+
   <br>
-  <app-figlio></app-figlio>
+
+  <app-figlio [cittaNascita]="cittaDalPadre" [anniRicevuti]="anniDigitati"></app-figlio>
+  <br>
 
 
+
+
+  <!--
   <div style="background-color: aqua; width: 40%; float: right; height: 350px;">
 
     @for (numero of generale; track $index) {
@@ -17,5 +35,6 @@
 
 
   </div>
+  -->
   <br>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-figlio',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './figlio.css'
 })
 export class Figlio {
+
+  @Input() cittaNascita: string = "Valore iniziale";   //property binding
+
+  @Input() anniRicevuti: number = 0
 
 }

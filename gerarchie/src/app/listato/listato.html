@@ -1,0 +1,13 @@
+<div style="background-color: grey; width: 80%; margin-left: 10%;">
+    <h2>Sono il componente della gestione delle fatture</h2>
+
+    <h2>Numero di fatture presenti in archivio: {{contab.length}}</h2>
+
+    @for (item of contab; track item.numero) {
+    <div>Numero: {{item.numero}} - Cliente: {{item.cliente}} - Descrizione: {{item.descrizione}} Importo:
+        {{item.importo}} - Cliente MAIUSCOLO: {{item.cliente | uppercase}} - {{item.importo | currency:"€"}}
+    </div>
+    }
+
+
+</div>
