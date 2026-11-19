@@ -1,3 +1,22 @@
 <div style="background-color: antiquewhite; width: 80%; margin-left: 50px; height: 600px;">
     <h1>Componente per la gestione dei servizi</h1>
+    <button (click)="carica()">Carica dati dal servizio-GET</button>
+
+    <h3>Numero di utenti letti dal servizio {{listaUtenti().length}}</h3>
+
+    <table border="2">
+        @for (item of listaUtenti(); track item.id) {
+        <tr>
+            <td><label for="">{{item.id}}</label></td>
+            <td><label for="">{{item.username}}</label></td>
+            <td><label for="">{{item.name}}</label></td>
+            <td><label for="">{{item.email}}</label></td>
+            <td><label for="">{{item.address.city}}</label></td>
+            <td><label for="">{{item.address.street}}</label></td>
+            <td><label for="">{{item.address.suite}}</label></td>
+            <td><label for="">{{item.address.zipcode}}</label></td>
+        </tr>
+        }
+    </table>
+
 </div>
