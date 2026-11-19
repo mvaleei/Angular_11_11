@@ -1,0 +1,13 @@
+<div style="width: 80%; background-color: chocolate;">
+
+    <label for="">Importo da {{utente ==0 || utente == 3 ? "prelevare" : "versare"}}</label>
+    <input type="number" [(ngModel)]="importo"> <label for="">{{importo}}</label>
+    <button (click)="nuovoSaldo()">Conferma {{utente ==0 || utente == 3 ? "prelievo" : "versamento"}}</button>
+    @if (utente != 3) {
+    <label for="">Saldo attuale:</label>
+    <app-saldo [saldoRicevuto]="saldo"></app-saldo>
+    }
+
+
+
+</div>

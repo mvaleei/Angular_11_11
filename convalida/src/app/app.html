@@ -1,0 +1,43 @@
+<div style="background-color: aqua; width: 90%; margin-left: 50px;">
+  <h1>Pagina di convalida dei dati</h1>
+
+  <form [formGroup]="contactForm" (submit)="registra()">
+
+    <div>
+      <label for="">Inserisci il tuo nome</label>
+      <input type="text" formControlName="nome">
+      @if (contactForm.controls['nome'].invalid) {
+      <div style="background-color: red;"> Attenzione massimo 15 caratteri</div>
+      }
+
+    </div>
+
+    <div>
+      <label for="">Inserisci il tuo cognome</label>
+      <input type="text" formControlName="cognome">
+      @if (contactForm.controls['cognome'].invalid) {
+      <div style="background-color: red;"> Attenzione campo obbligatorio e minimo 3 caratteri</div>
+
+      }
+
+    </div>
+
+    <div>
+      <label for="">Inserisci i tuoi anni</label>
+      <input type="number" formControlName="anni">
+      @if (contactForm.controls['anni'].invalid) {
+      <div style="background-color: red;"> Attenzione si deve essere maggiorenni</div>
+      }
+
+
+    </div>
+
+    <div>
+      <button [disabled]="contactForm.invalid" type="submit">Conferma dati</button>
+      <button type="reset">Cancella dati</button>
+    </div>
+
+  </form>
+
+
+</div>

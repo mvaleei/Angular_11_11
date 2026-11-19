@@ -1,0 +1,25 @@
+<div style="background-color: beige; height: 800px;">
+  <h1 align="center">Gestione carta</h1>
+
+  <div style="float: left; width: 10%;">
+    <label for="">Saldo carta Postepay</label> <br>
+    <app-saldo [saldoRicevuto]="saldo"></app-saldo>
+  </div>
+  <br>
+
+  <br>
+  <br>
+
+  <div style="float: left; width: 100%;">
+    <app-operazione [utente]="0" (eventoImporto)="riceviImporto($event)" [saldo]="saldo"></app-operazione>
+  </div>
+  <br> <br>
+  <div style="float: left; width: 100%;">
+    <app-operazione [utente]="1" (eventoImporto)="riceviImporto($event)" [saldo]="saldo"></app-operazione>
+  </div>
+  <br> <br>
+  <div style="float: left; width: 100%;">
+    <app-operazione [utente]="3" (eventoImporto)="riceviImporto($event)" [saldo]="saldo"></app-operazione>
+  </div>
+
+</div>
