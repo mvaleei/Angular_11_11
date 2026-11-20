@@ -1,0 +1,19 @@
+<div style="background-color: green; width: 80%; margin-left: 50px;">
+    <h2>Sono il componente della gestione delle fatture</h2>
+
+    <div>
+        <ol>
+            <li>
+                <a routerLink="/fatture/listato">Lista</a>
+            </li>
+        </ol>
+        <ol>
+            <li>
+                <a routerLink="/fatture/inserisci">Nuova fattura</a>
+            </li>
+        </ol>
+    </div>
+
+    <h3>Dopo questo tag, verranno innestati i componenti figli di fatture</h3>
+    <router-outlet></router-outlet>
+</div>
