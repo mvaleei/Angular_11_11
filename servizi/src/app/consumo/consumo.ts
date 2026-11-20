@@ -23,9 +23,29 @@ export class Consumo {
         error: (errore) => console.log(errore)
       }
     )
+  }
 
 
+  nuovoPost(): void {
+    let newUtente: IUtente = {
+      id: 999,
+      name: "Prova nome",
+      email: "email@email.it",
+      username: "username mio",
+      address: {
+        city: "new york",
+        street: "Vias della prova",
+        suite: "Imperiale",
+        zipcode: "00100"
+      }
+    }
 
+
+    this._utentiService.inviaPost(newUtente).subscribe(
+      {
+        next: (utenteRicevuto: IUtente) => console.log(utenteRicevuto)
+      }
+    )
   }
 
 }

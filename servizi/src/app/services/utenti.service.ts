@@ -32,5 +32,10 @@ export class UtentiService {
     }
 
 
+    inviaPost(nuovoUtente: IUtente): Observable<IUtente> {
+        return this.http.post<IUtente>(this.url, nuovoUtente);
+    }
+
+
 
 }
