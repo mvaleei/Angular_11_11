@@ -1,0 +1,37 @@
+<div>
+  <h1 align="center">Esercizio sui servizi</h1>
+
+
+  <button (click)="caricaUtenti()">Carica utenti</button>
+
+  <select (change)="caricaPost()" [(ngModel)]="idUtenteScelto">
+    <option value="0">Seleziona l'utente</option>
+    @for (item of listautenti(); track item.id) {
+    <option value={{item.id}}>{{item.username}} - {{item.email}}</option>
+    }
+  </select> <span>{{idUtenteScelto}}</span>
+
+
+  <br><br><br>
+  <table border="2">
+    <tr>
+      <td><label for="">Id post</label></td>
+      <td><label for="">Id Utente</label></td>
+      <td><label for="">Titolo</label></td>
+      <td><label for="">Testo</label></td>
+    </tr>
+    @for (item of listaPosts(); track item.id) {
+    <!-- @if (item.userId == idUtenteScelto) {-->
+    <tr>
+      <td><label for="">{{item.id}}</label></td>
+      <td><label for="">{{item.userId}}</label></td>
+      <td><label for="">{{item.title}}</label></td>
+      <td><label for="">{{item.body}}</label></td>
+    </tr>
+    }
+
+    <!--}-->
+  </table>
+
+
+</div>
