@@ -7,9 +7,16 @@ import { Magazzino } from './magazzino/magazzino';
 import { ListaFatture } from './lista-fatture/lista-fatture';
 import { NuovaFattura } from './nuova-fattura/nuova-fattura';
 
+import { Login } from './login/login';
+import { Utenza } from './utenza/utenza';
+import { Ruoli } from './ruoli/ruoli';
+
 //il file che configura le regole di routing
 //regola di routing: data una url, verrà innestato un determinato componente
 //http://www.pippo.it/clienti  -> innesterà il componente dei clienti
+
+import { AuthGuardService } from './auth/auth-guard.service';
+import { RoleGuardService } from './auth/role-guard.service';
 
 
 export const routes: Routes = [
@@ -42,5 +49,22 @@ export const routes: Routes = [
     {
         path: 'magazzino',
         component: Magazzino
+    },
+    {
+        path: 'login',
+        component: Login
+    },
+    {
+        path: 'utenze',
+        component: Utenza,
+        canActivate: [AuthGuardService]
+    },
+    {
+        path: 'ruoli',
+        component: Ruoli,
+        canActivate: [RoleGuardService],
+        data: {
+            ruoloAutorizzato: "DBA"
+        }
     },
 ];
